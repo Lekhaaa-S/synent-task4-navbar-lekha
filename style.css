@@ -45,6 +45,17 @@ body{
 .nav-links li a:hover{
     color:#38bdf8;
 }
+
+.menu-icon{
+    display:none;
+    background:transparent;
+    border:none;
+    color:#f8fafc;
+    font-size:26px;
+    cursor:pointer;
+    line-height:1;
+    user-select:none;
+}
 @media(max-width:768px){
 
     .navbar{
@@ -77,6 +88,8 @@ body{
     .nav-links{
         width:100%;
         gap:14px 18px;
+        display:none;
+        flex-direction:column;
     }
 
     .nav-links li{
@@ -88,6 +101,16 @@ body{
         width:100%;
         font-size:16px;
         padding:6px 0;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-icon{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
     }
 
 }
