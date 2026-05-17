@@ -88,8 +88,12 @@ body{
     .nav-links{
         width:100%;
         gap:14px 18px;
-        display:none;
         flex-direction:column;
+        max-height:0;
+        opacity:0;
+        overflow:hidden;
+        pointer-events:none;
+        transition:max-height 0.3s ease, opacity 0.3s ease;
     }
 
     .nav-links li{
@@ -104,7 +108,9 @@ body{
     }
 
     .nav-links.active{
-        display:flex;
+        max-height:320px;
+        opacity:1;
+        pointer-events:auto;
     }
 
     .menu-icon{
